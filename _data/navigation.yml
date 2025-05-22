@@ -19,11 +19,7 @@ main:
 # 2022.02.15 sidebar update : simple ver.
 categories:
   - title: "Algorithm"
-    children:
-      - title: "Baekjoon"
-        url: /categories/algorithm-baekjoon/
-      - title: "Programmers"
-        url: /categories/algorithm-programmers/
+    url: /categories/algorithm/
 
   - title: "Project"
     url: /categories/project/
