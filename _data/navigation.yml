@@ -18,25 +18,18 @@ main:
 # sidebar navigation (categories)
 # 2022.02.15 sidebar update : simple ver.
 categories:
-  - title: "Title1"
+  - title: "Algorithm"
     children:
-      - title: "Categories1"
-        url: /categories/categories1/
-      - title: "Categories2"
-        url: /categories/categories2/
-      - title: "Categories3"
-        url: /categories/categories3/
-      - title: "Categories4"
-        url: /categories/categories4/
+      - title: "Baekjoon"
+        url: /categories/algorithm-baekjoon/
+      - title: "Programmers"
+        url: /categories/algorithm-programmers/
 
-  - title: "Title2"
-    children:
-      - title: "Categories5"
-        url: /categories/categories5/
-      - title: "Categories6"
-        url: /categories/categories6/
+  - title: "Project"
+    url: /categories/project/
 
-  - title: "Title3"
-    children:
-      - title: "Categories7"
-        url: /categories/categories7/
+  - title: "License"
+    url: /categories/license/
+
+  - title: "Article"
+    url: /categories/article/
