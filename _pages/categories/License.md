@@ -1,9 +1,9 @@
 ---
-title: "License"
+title: "Certification"
 layout: category
-permalink: /categories/license/
+permalink: /categories/certification/
 author_profile: true
-taxonomy: license
+taxonomy: certification
 sidebar:
   nav: "categories"
 ---
