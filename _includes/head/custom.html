@@ -5,39 +5,112 @@
 <style>
 /* ===== Portfolio Custom Styles ===== */
 :root {
-  --pa: #6b4faa;
-  --pa-light: #f5f0ff;
-  --pa-border: #e2d9f3;
+  --pa: #4b5563;
+  --pa-light: #f9fafb;
+  --pa-border: #e5e7eb;
 }
 
-/* Cert Grid */
-.port-cert-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
-  gap: 10px;
-  margin: 0.8em 0 1.6em;
-}
-.port-cert-card {
-  border: 1px solid var(--pa-border);
-  border-radius: 8px;
-  padding: 12px 16px;
-  background: var(--pa-light);
-}
-.port-cert-card .cc-name { display: block; font-weight: 700; font-size: 0.88em; color: #222; }
-.port-cert-card .cc-sub  { display: block; font-size: 0.77em; color: #777; margin-top: 2px; }
-.port-cert-card .cc-date { display: block; font-size: 0.76em; color: #aaa; margin-top: 5px; font-weight: 600; }
+/* Smooth scroll */
+html { scroll-behavior: smooth; }
 
-/* Skill Section */
-.port-skill-section { margin: 0.8em 0 2em; }
-.port-skill-group   { margin-bottom: 1.4em; }
-.port-skill-label {
-  font-size: 0.72em;
+/* ── Cert / Timeline ── */
+.port-tl-wrap { margin: 0.5em 0 2em; }
+.port-tl-section {
+  font-size: 0.7em;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.08em;
-  color: #999;
-  margin-bottom: 8px;
+  letter-spacing: 0.09em;
+  color: var(--pa);
+  margin: 1.4em 0 0.6em 28px;
 }
+.port-timeline {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 0.4em;
+}
+.port-timeline::before {
+  content: '';
+  position: absolute;
+  left: 5px;
+  top: 8px;
+  bottom: 4px;
+  width: 2px;
+  background: linear-gradient(to bottom, var(--pa) 0%, var(--pa-border) 100%);
+}
+.port-tl-item {
+  position: relative;
+  margin-bottom: 1.8em;
+}
+.port-tl-item:last-child { margin-bottom: 0.4em; }
+.port-tl-item::before {
+  content: '';
+  position: absolute;
+  left: -22px;
+  top: 5px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  border: 2px solid var(--pa);
+  box-shadow: 0 0 0 3px var(--pa-light);
+}
+.port-tl-date  { font-size: 0.74em; color: #aaa; font-weight: 600; margin-bottom: 3px; }
+.port-tl-title { font-size: 0.91em; font-weight: 800; color: #222; margin-bottom: 3px; }
+.port-tl-sub   { font-size: 0.8em; color: var(--pa); font-weight: 600; }
+
+/* ── Cert / Language 2-column ── */
+.port-cert-lang-wrap {
+  display: flex;
+  gap: 32px;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+.port-cert-col { flex: 1 1 180px; }
+
+/* ── Skill Tabs ── */
+.port-tabs { margin: 0.8em 0 2em; }
+.port-tab-nav {
+  display: flex;
+  flex-wrap: nowrap;
+  border-bottom: 2px solid var(--pa-border);
+  margin-bottom: 1.2em;
+  gap: 0;
+}
+.port-tab-btn {
+  flex: 1;
+  text-align: center;
+  padding: 8px 6px;
+  font-size: 0.77em;
+  font-weight: 700;
+  cursor: pointer;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  margin-bottom: -2px;
+  color: #aaa;
+  border-radius: 4px 4px 0 0;
+  transition: color 0.18s, border-color 0.18s, background 0.18s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+.port-tab-btn:hover { color: var(--pa); background: var(--pa-light); }
+.port-tab-btn.active {
+  color: var(--pa);
+  border-bottom-color: var(--pa);
+  background: var(--pa-light);
+}
+.port-tab-panel { display: none; }
+.port-tab-panel.active {
+  display: block;
+  animation: portTabIn 0.22s ease;
+}
+@keyframes portTabIn {
+  from { opacity: 0; transform: translateY(7px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ── Skill Items (inside tabs) ── */
 .port-skill-grid {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
@@ -53,9 +126,9 @@
 .port-skill-item .si-name { font-size: 0.86em; font-weight: 700; color: #222; }
 .port-skill-item .si-desc { font-size: 0.78em; color: #666; margin-top: 3px; line-height: 1.5; }
 
-/* Project Cards (About page) */
+/* ── Project Cards ── */
 .port-proj-cards { display: flex; flex-wrap: wrap; gap: 16px; margin: 1em 0; }
-.port-proj-card  {
+.port-proj-card {
   flex: 1 1 270px;
   border: 1.5px solid var(--pa-border);
   border-radius: 12px;
@@ -74,7 +147,26 @@
 .port-proj-card .ppc-tags   { display: flex; flex-wrap: wrap; gap: 5px; }
 .port-proj-card .ppc-tag    { font-size: 0.7em; background: var(--pa-light); color: var(--pa); padding: 2px 9px; border-radius: 999px; font-weight: 600; }
 
-/* Post Meta Bar */
+/* ── Contact ── */
+.port-contact-wrap { display: flex; flex-wrap: wrap; gap: 12px; margin: 1em 0; }
+.port-contact-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--pa-light);
+  border: 1px solid var(--pa-border);
+  border-radius: 8px;
+  padding: 12px 20px;
+  text-decoration: none !important;
+  color: #333 !important;
+  font-size: 0.87em;
+  font-weight: 600;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.port-contact-item:hover { border-color: var(--pa); box-shadow: 0 2px 8px rgba(107,79,170,0.12); }
+.port-contact-icon { font-size: 1.05em; }
+
+/* ── Post: Meta bar ── */
 .port-meta-bar {
   display: flex;
   flex-wrap: wrap;
@@ -93,9 +185,15 @@
 .port-meta-label { font-size: 0.67em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--pa); margin-bottom: 4px; }
 .port-meta-value { font-size: 0.85em; font-weight: 700; color: #333; }
 
-/* Tech Badges */
+/* ── Post: Tech Badges ── */
 .port-tech-badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 0.6em 0 1.6em; }
 .port-badge { display: inline-block; padding: 3px 11px; border-radius: 999px; font-size: 0.78em; font-weight: 600; }
+
+/* ── Post: Tech Groups ── */
+.port-tech-groups { margin: 0.6em 0 1.6em; }
+.port-tech-group { display: flex; align-items: flex-start; gap: 12px; margin-bottom: 8px; }
+.ptg-label { font-size: 0.69em; font-weight: 700; color: #888; min-width: 76px; text-align: right; padding-top: 4px; flex-shrink: 0; }
+.ptg-badges { display: flex; flex-wrap: wrap; gap: 5px; }
 .pb-b { background: #dbeafe; color: #1e40af; }
 .pb-g { background: #dcfce7; color: #166534; }
 .pb-y { background: #fef9c3; color: #854d0e; }
@@ -104,7 +202,7 @@
 .pb-o { background: #ffedd5; color: #9a3412; }
 .pb-s { background: #f1f5f9; color: #475569; }
 
-/* Overview Flow */
+/* ── Post: Flow ── */
 .port-flow {
   border: 1px solid var(--pa-border);
   border-radius: 10px;
@@ -133,7 +231,19 @@
 .port-flow-text { font-size: 0.87em; color: #444; line-height: 1.55; }
 .port-flow-text strong { color: #222; }
 
-/* Decision Box */
+/* ── Post: Role Tags ── */
+.port-role-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0.6em 0 1.6em; }
+.port-role-tag {
+  background: #fff;
+  border: 1.5px solid var(--pa);
+  color: var(--pa);
+  font-size: 0.8em;
+  font-weight: 700;
+  padding: 4px 13px;
+  border-radius: 6px;
+}
+
+/* ── Post: Decision Box ── */
 .port-decision {
   background: var(--pa-light);
   border-left: 4px solid var(--pa);
@@ -146,22 +256,29 @@
 }
 .port-decision p:last-child { margin-bottom: 0; }
 
-/* Role Tags */
-.port-role-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0.6em 0 1.6em; }
-.port-role-tag {
-  background: #fff;
-  border: 1.5px solid var(--pa);
-  color: var(--pa);
-  font-size: 0.8em;
-  font-weight: 700;
-  padding: 4px 13px;
-  border-radius: 6px;
-}
-
-/* Perf Table */
+/* ── Post: Perf Table ── */
 .port-perf-wrap { overflow-x: auto; margin: 1em 0; }
 .port-perf-wrap table { min-width: 400px; }
 .port-highlight { color: var(--pa); font-weight: 800; }
+
+/* ── Post: Opt Steps ── */
+.port-opt-steps { margin: 1em 0 1.4em; }
+.port-opt-step { border: 1px solid var(--pa-border); border-radius: 10px; overflow: hidden; margin-bottom: 10px; }
+.port-opt-step-hd { display: flex; align-items: center; gap: 10px; padding: 10px 16px; background: var(--pa-light); border-bottom: 1px solid var(--pa-border); }
+.port-opt-step-num { background: var(--pa); color: #fff; font-size: 0.72em; font-weight: 700; padding: 2px 10px; border-radius: 999px; flex-shrink: 0; }
+.port-opt-step-title { font-size: 0.9em; font-weight: 700; color: #333; }
+.port-opt-step-body { padding: 12px 16px; font-size: 0.86em; color: #444; line-height: 1.65; }
+
+/* ── Post: Perf Progression Cards ── */
+.port-perf-prog { display: flex; align-items: stretch; gap: 8px; margin: 0.4em 0 1.8em; flex-wrap: wrap; }
+.port-perf-prog-item { flex: 1 1 0; min-width: 90px; border: 1px solid var(--pa-border); border-radius: 10px; padding: 14px 16px; background: #fff; text-align: center; }
+.port-perf-prog-item.is-final { border-color: var(--pa); background: var(--pa-light); }
+.pppi-label { font-size: 0.69em; color: #888; font-weight: 600; margin-bottom: 6px; }
+.pppi-mtt { font-size: 1.35em; font-weight: 800; color: #222; }
+.is-final .pppi-mtt { color: var(--pa); }
+.pppi-tps { font-size: 0.73em; color: #666; margin-top: 2px; }
+.pppi-delta { display: inline-block; font-size: 0.71em; font-weight: 700; color: #166534; background: #dcfce7; padding: 2px 9px; border-radius: 999px; margin-top: 8px; }
+.pppi-arrow { font-size: 1.1em; color: #ccc; flex-shrink: 0; display: flex; align-items: center; }
 </style>
 
 <!-- end custom head snippets -->

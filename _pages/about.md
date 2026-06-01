@@ -4,64 +4,81 @@ permalink: /about/
 layout: single
 comments: false
 author_profile: true
+sidebar:
+  nav: "about_toc"
+toc: true
+toc_label: "목차"
+toc_sticky: true
 ---
 
 문제의 원인을 끝까지 파고들어 근본적인 해결책을 만들어내는 개발자입니다.
 
-`kokodd1234@gmail.com` &nbsp;·&nbsp; `010-8519-7066` &nbsp;·&nbsp; [GitHub](https://github.com/sw-oo)
-
 ---
 
-## 자격증 & 어학
+## Certification / Language {#cert}
 
-<div class="port-cert-grid">
-  <div class="port-cert-card">
-    <span class="cc-name">정보처리기사</span>
-    <span class="cc-sub">한국산업인력공단</span>
-    <span class="cc-date">2025.08</span>
+<div class="port-tl-wrap port-cert-lang-wrap">
+
+  <div class="port-cert-col">
+    <div class="port-tl-section">Certification</div>
+    <div class="port-timeline">
+      <div class="port-tl-item">
+        <div class="port-tl-date">2026.03</div>
+        <div class="port-tl-title">PCCP LV2</div>
+        <div class="port-tl-sub">프로그래머스</div>
+      </div>
+      <div class="port-tl-item">
+        <div class="port-tl-date">2025.08</div>
+        <div class="port-tl-title">정보처리기사</div>
+        <div class="port-tl-sub">한국산업인력공단</div>
+      </div>
+      <div class="port-tl-item">
+        <div class="port-tl-date">2025.06</div>
+        <div class="port-tl-title">ADsP · SQLD</div>
+        <div class="port-tl-sub">데이터분석준전문가 · SQL개발자</div>
+      </div>
+      <div class="port-tl-item">
+        <div class="port-tl-date">2025.02</div>
+        <div class="port-tl-title">한국사능력검정시험 1급</div>
+        <div class="port-tl-sub">국사편찬위원회</div>
+      </div>
+    </div>
   </div>
-  <div class="port-cert-card">
-    <span class="cc-name">한국사능력검정시험 1급</span>
-    <span class="cc-sub">국사편찬위원회</span>
-    <span class="cc-date">2025.02</span>
+
+  <div class="port-cert-col">
+    <div class="port-tl-section">Language</div>
+    <div class="port-timeline">
+      <div class="port-tl-item">
+        <div class="port-tl-date">2025.10</div>
+        <div class="port-tl-title">TOEIC Speaking IH</div>
+        <div class="port-tl-sub">150점 · ETS</div>
+      </div>
+    </div>
   </div>
-  <div class="port-cert-card">
-    <span class="cc-name">ADsP</span>
-    <span class="cc-sub">데이터분석준전문가</span>
-    <span class="cc-date">2025.06</span>
-  </div>
-  <div class="port-cert-card">
-    <span class="cc-name">SQLD</span>
-    <span class="cc-sub">SQL개발자</span>
-    <span class="cc-date">2025.06</span>
-  </div>
-  <div class="port-cert-card">
-    <span class="cc-name">PCCP LV2</span>
-    <span class="cc-sub">프로그래머스</span>
-    <span class="cc-date">2026.03</span>
-  </div>
-  <div class="port-cert-card">
-    <span class="cc-name">TOEIC Speaking IH</span>
-    <span class="cc-sub">150점 · ETS</span>
-    <span class="cc-date">2025.10</span>
-  </div>
+
 </div>
 
 ---
 
-## Skills
+## Skills {#skills}
 
-<div class="port-skill-section">
+<div class="port-tabs">
 
-  <div class="port-skill-group">
-    <div class="port-skill-label">Backend</div>
+  <div class="port-tab-nav">
+    <button class="port-tab-btn active" data-tab="tab-backend">Backend</button>
+    <button class="port-tab-btn" data-tab="tab-realtime">Real-time</button>
+    <button class="port-tab-btn" data-tab="tab-infra">DevOps</button>
+    <button class="port-tab-btn" data-tab="tab-monitoring">Monitoring</button>
+  </div>
+
+  <div id="tab-backend" class="port-tab-panel active">
     <div class="port-skill-grid">
       <div class="port-skill-item">
         <div class="si-name">Spring Batch</div>
         <div class="si-desc">Tasklet + Chunk 혼합 설계, Partitioning 4스레드 병렬 처리로 401초 → 7.6초 달성</div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">JPA · Bulk Query</div>
+        <div class="si-name">JPA</div>
         <div class="si-desc">Fetch Join, @BatchSize로 N+1 제거 / @Modifying 벌크 UPDATE·INSERT로 flush() O(n²) 해소</div>
       </div>
       <div class="port-skill-item">
@@ -72,11 +89,14 @@ author_profile: true
         <div class="si-name">Spring Boot · Java</div>
         <div class="si-desc">REST API 설계, MSA 멀티모듈 구조, 도메인 레이어 분리</div>
       </div>
+      <div class="port-skill-item">
+        <div class="si-name">Swagger</div>
+        <div class="si-desc">REST API 명세 자동화, 팀 간 인터페이스 계약 문서화</div>
+      </div>
     </div>
   </div>
 
-  <div class="port-skill-group">
-    <div class="port-skill-label">Real-time &amp; Notification</div>
+  <div id="tab-realtime" class="port-tab-panel">
     <div class="port-skill-grid">
       <div class="port-skill-item">
         <div class="si-name">WebSocket · STOMP</div>
@@ -93,12 +113,15 @@ author_profile: true
     </div>
   </div>
 
-  <div class="port-skill-group">
-    <div class="port-skill-label">Infrastructure &amp; DevOps</div>
+  <div id="tab-infra" class="port-tab-panel">
     <div class="port-skill-grid">
       <div class="port-skill-item">
-        <div class="si-name">Kubernetes · K8s CronJob</div>
-        <div class="si-desc">배치 독립 Pod 실행, ConcurrencyPolicy Forbid · backoffLimit으로 중복 방지 및 자동 재시도</div>
+        <div class="si-name">Kubernetes</div>
+        <div class="si-desc">CronJob으로 배치 독립 Pod 실행, ConcurrencyPolicy Forbid · backoffLimit으로 중복 방지 및 자동 재시도</div>
+      </div>
+      <div class="port-skill-item">
+        <div class="si-name">Istio</div>
+        <div class="si-desc">서비스 메시로 마이크로서비스 간 트래픽 관리 및 통신 제어</div>
       </div>
       <div class="port-skill-item">
         <div class="si-name">Docker · Jenkins</div>
@@ -107,8 +130,7 @@ author_profile: true
     </div>
   </div>
 
-  <div class="port-skill-group">
-    <div class="port-skill-label">Monitoring &amp; Testing</div>
+  <div id="tab-monitoring" class="port-tab-panel">
     <div class="port-skill-grid">
       <div class="port-skill-item">
         <div class="si-name">Jaeger</div>
@@ -129,19 +151,19 @@ author_profile: true
 
 ---
 
-## Projects
+## Projects {#projects}
 
 <div class="port-proj-cards">
   <a class="port-proj-card" href="/project/poticard/">
     <div class="ppc-type">B2C Platform · 2025.12 — 2026.04</div>
     <div class="ppc-title">Poticard</div>
-    <div class="ppc-period">AI 기반 디지털 명함 & 채용 플랫폼</div>
+    <div class="ppc-period">AI 기반 디지털 명함 &amp; 채용 플랫폼</div>
     <div class="ppc-desc">경력 데이터 AI 분석 → 디지털 명함 생성 → 구직자·채용 담당자 간 실시간 채팅·지원 플랫폼. 실시간 채팅, 알림 시스템, 성능 최적화 담당.</div>
     <div class="ppc-tags">
       <span class="ppc-tag">WebSocket · STOMP</span>
       <span class="ppc-tag">Web Push API</span>
       <span class="ppc-tag">SSE</span>
-      <span class="ppc-tag">JPA 최적화</span>
+      <span class="ppc-tag">성능 최적화</span>
       <span class="ppc-tag">nGrinder</span>
     </div>
   </a>
@@ -151,11 +173,49 @@ author_profile: true
     <div class="ppc-period">건설 현장관리 ERP 시스템</div>
     <div class="ppc-desc">인력 배치·출결 관리·피로도 기반 구역 배정 ERP. Multimodule + MSA 구조. 인증/인가, 인력 동기화 배치, 모바일 API 연동 담당.</div>
     <div class="ppc-tags">
-      <span class="ppc-tag">JWT · RBAC+ABAC</span>
+      <span class="ppc-tag">인증/인가</span>
       <span class="ppc-tag">Spring Batch</span>
-      <span class="ppc-tag">K8s CronJob</span>
       <span class="ppc-tag">Partitioning</span>
-      <span class="ppc-tag">Ionic Vue</span>
+      <span class="ppc-tag">Istio</span>
+      <span class="ppc-tag">인력 데이터 자동화</span>
     </div>
   </a>
 </div>
+
+---
+
+## Contact {#contact}
+
+<div class="port-contact-wrap">
+  <a class="port-contact-item" href="mailto:kokodd1234@gmail.com">
+    <span class="port-contact-icon">✉</span>
+    <span>kokodd1234@gmail.com</span>
+  </a>
+  <a class="port-contact-item" href="tel:01085197066">
+    <span class="port-contact-icon">📱</span>
+    <span>010-8519-7066</span>
+  </a>
+</div>
+
+<script>
+(function () {
+  function initTabs() {
+    document.querySelectorAll('.port-tabs').forEach(function (wrap) {
+      wrap.querySelectorAll('.port-tab-btn').forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          wrap.querySelectorAll('.port-tab-btn').forEach(function (b) { b.classList.remove('active'); });
+          wrap.querySelectorAll('.port-tab-panel').forEach(function (p) { p.classList.remove('active'); });
+          btn.classList.add('active');
+          var panel = wrap.querySelector('#' + btn.dataset.tab);
+          if (panel) panel.classList.add('active');
+        });
+      });
+    });
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initTabs);
+  } else {
+    initTabs();
+  }
+})();
+</script>

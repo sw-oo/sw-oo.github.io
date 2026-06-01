@@ -15,6 +15,26 @@ main:
   # - title: "Categories"
   #   url: /categories/
 
+# Project pages sidebar
+projects_nav:
+  - title: "← About"
+    url: "/about/"
+  - title: "Poticard"
+    url: "/project/poticard/"
+  - title: "DnDn"
+    url: "/project/dndn/"
+
+# About page sidebar TOC
+about_toc:
+  - title: "Certification / Language"
+    url: "/about/#cert"
+  - title: "Skills"
+    url: "/about/#skills"
+  - title: "Projects"
+    url: "/about/#projects"
+  - title: "Contact"
+    url: "/about/#contact"
+
 # sidebar navigation (categories)
 # 2022.02.15 sidebar update : simple ver.
 categories:
