@@ -2,4 +2,166 @@
 
 <!-- insert favicons. use https://realfavicongenerator.net/ -->
 
+<style>
+/* ===== Portfolio Custom Styles ===== */
+:root {
+  --pa: #6b4faa;
+  --pa-light: #f5f0ff;
+  --pa-border: #e2d9f3;
+}
+
+/* Cert Grid */
+.port-cert-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
+  gap: 10px;
+  margin: 0.8em 0 1.6em;
+}
+.port-cert-card {
+  border: 1px solid var(--pa-border);
+  border-radius: 8px;
+  padding: 12px 16px;
+  background: var(--pa-light);
+}
+.port-cert-card .cc-name { display: block; font-weight: 700; font-size: 0.88em; color: #222; }
+.port-cert-card .cc-sub  { display: block; font-size: 0.77em; color: #777; margin-top: 2px; }
+.port-cert-card .cc-date { display: block; font-size: 0.76em; color: #aaa; margin-top: 5px; font-weight: 600; }
+
+/* Skill Section */
+.port-skill-section { margin: 0.8em 0 2em; }
+.port-skill-group   { margin-bottom: 1.4em; }
+.port-skill-label {
+  font-size: 0.72em;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #999;
+  margin-bottom: 8px;
+}
+.port-skill-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 8px;
+}
+.port-skill-item {
+  border: 1px solid var(--pa-border);
+  border-left: 3px solid var(--pa);
+  border-radius: 0 8px 8px 0;
+  padding: 10px 14px;
+  background: #fff;
+}
+.port-skill-item .si-name { font-size: 0.86em; font-weight: 700; color: #222; }
+.port-skill-item .si-desc { font-size: 0.78em; color: #666; margin-top: 3px; line-height: 1.5; }
+
+/* Project Cards (About page) */
+.port-proj-cards { display: flex; flex-wrap: wrap; gap: 16px; margin: 1em 0; }
+.port-proj-card  {
+  flex: 1 1 270px;
+  border: 1.5px solid var(--pa-border);
+  border-radius: 12px;
+  padding: 22px 24px;
+  background: #fff;
+  transition: box-shadow 0.2s, border-color 0.2s;
+  text-decoration: none !important;
+  color: inherit !important;
+  display: block;
+}
+.port-proj-card:hover { box-shadow: 0 6px 20px rgba(107,79,170,0.13); border-color: var(--pa); }
+.port-proj-card .ppc-type   { font-size: 0.7em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--pa); margin-bottom: 5px; }
+.port-proj-card .ppc-title  { font-size: 1.05em; font-weight: 800; margin-bottom: 4px; color: #111; }
+.port-proj-card .ppc-period { font-size: 0.77em; color: #aaa; margin-bottom: 10px; }
+.port-proj-card .ppc-desc   { font-size: 0.83em; color: #555; line-height: 1.58; margin-bottom: 14px; }
+.port-proj-card .ppc-tags   { display: flex; flex-wrap: wrap; gap: 5px; }
+.port-proj-card .ppc-tag    { font-size: 0.7em; background: var(--pa-light); color: var(--pa); padding: 2px 9px; border-radius: 999px; font-weight: 600; }
+
+/* Post Meta Bar */
+.port-meta-bar {
+  display: flex;
+  flex-wrap: wrap;
+  border: 1px solid var(--pa-border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 0.5em 0 2em;
+}
+.port-meta-item {
+  flex: 1 1 140px;
+  padding: 14px 18px;
+  background: var(--pa-light);
+  border-right: 1px solid var(--pa-border);
+}
+.port-meta-item:last-child { border-right: none; }
+.port-meta-label { font-size: 0.67em; font-weight: 700; text-transform: uppercase; letter-spacing: 0.07em; color: var(--pa); margin-bottom: 4px; }
+.port-meta-value { font-size: 0.85em; font-weight: 700; color: #333; }
+
+/* Tech Badges */
+.port-tech-badges { display: flex; flex-wrap: wrap; gap: 6px; margin: 0.6em 0 1.6em; }
+.port-badge { display: inline-block; padding: 3px 11px; border-radius: 999px; font-size: 0.78em; font-weight: 600; }
+.pb-b { background: #dbeafe; color: #1e40af; }
+.pb-g { background: #dcfce7; color: #166534; }
+.pb-y { background: #fef9c3; color: #854d0e; }
+.pb-p { background: #ede9fe; color: #5b21b6; }
+.pb-r { background: #fee2e2; color: #991b1b; }
+.pb-o { background: #ffedd5; color: #9a3412; }
+.pb-s { background: #f1f5f9; color: #475569; }
+
+/* Overview Flow */
+.port-flow {
+  border: 1px solid var(--pa-border);
+  border-radius: 10px;
+  overflow: hidden;
+  margin: 1em 0 1.6em;
+}
+.port-flow-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 12px 18px;
+  border-bottom: 1px solid var(--pa-border);
+}
+.port-flow-item:last-child { border-bottom: none; }
+.port-flow-num {
+  flex-shrink: 0;
+  width: 24px; height: 24px;
+  background: var(--pa);
+  color: #fff;
+  border-radius: 50%;
+  font-size: 0.75em;
+  font-weight: 700;
+  display: flex; align-items: center; justify-content: center;
+  margin-top: 1px;
+}
+.port-flow-text { font-size: 0.87em; color: #444; line-height: 1.55; }
+.port-flow-text strong { color: #222; }
+
+/* Decision Box */
+.port-decision {
+  background: var(--pa-light);
+  border-left: 4px solid var(--pa);
+  padding: 14px 18px;
+  border-radius: 0 8px 8px 0;
+  margin: 1em 0 1.4em;
+  font-size: 0.9em;
+  line-height: 1.7;
+  color: #333;
+}
+.port-decision p:last-child { margin-bottom: 0; }
+
+/* Role Tags */
+.port-role-tags { display: flex; flex-wrap: wrap; gap: 8px; margin: 0.6em 0 1.6em; }
+.port-role-tag {
+  background: #fff;
+  border: 1.5px solid var(--pa);
+  color: var(--pa);
+  font-size: 0.8em;
+  font-weight: 700;
+  padding: 4px 13px;
+  border-radius: 6px;
+}
+
+/* Perf Table */
+.port-perf-wrap { overflow-x: auto; margin: 1em 0; }
+.port-perf-wrap table { min-width: 400px; }
+.port-highlight { color: var(--pa); font-weight: 800; }
+</style>
+
 <!-- end custom head snippets -->
