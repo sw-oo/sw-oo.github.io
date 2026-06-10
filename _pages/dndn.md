@@ -35,11 +35,9 @@ toc_sticky: true
 
 ## 프로젝트 개요
 
-- ERP 대시보드에서 건설 현장·공종·인력 등록 및 배치 관리
-- 매일 새벽 K8s CronJob → 외부 HR 시스템 인력 수집·검증 → 당일 로스터·피로도 초기값 자동 생성
-- 근로자 Ionic Vue 앱으로 현장 QR 인식 → 출결 처리 및 API 실시간 업데이트
-- 연속 출근·야간 근무·사고 이력 종합 피로도 점수 배치 실행마다 재산정, 기준 초과 시 알림 발송
-- FE 대시보드에서 현장별 출결·인력 배치·위험도 실시간 모니터링
+- 건설 현장의 인력·근태·안전·공정·문서·ESG 데이터를 실시간으로 수집·통합 관리하는 ERP 플랫폼
+- 현장 소장·관리자가 근로자 현황, 게이트 혼잡도, 공정 진행률, 일일 보고를 대시보드 한 화면에서 모니터링
+- MSA 기반 Multimodule 구조(dndn-core, document-management, gateway, discovery)와 외부 HR 연동·피로도 산정 배치 파이프라인
 
 ## 담당 기능
 
@@ -48,6 +46,7 @@ toc_sticky: true
 - **근무자 관리** — 근로자 프로필·출결·사고 이력 관리 API (dndn-core / worker 패키지)
 - **Mobile 연동** — Ionic Vue 앱 ↔ dndn-core REST API 연동 설계 및 구현
 - **인력 데이터 조회 자동화** — 외부 HR 수집 → 검증 → 운영 테이블 동기화 7 Step 배치 파이프라인 (dndn-batch 모듈 전체)
+- **Kubernetes 환경 관리 및 운영** — Jenkins를 활용한 CI/CD, Blue/Green 무중단 배포
 
 ## 기술 스택
 
@@ -74,6 +73,7 @@ toc_sticky: true
       <span class="port-badge pb-o">Kubernetes</span>
       <span class="port-badge pb-o">Istio</span>
       <span class="port-badge pb-o">Docker</span>
+      <span class="port-badge pb-o">Jenkins</span>
     </div>
   </div>
   <div class="port-tech-group">
@@ -234,18 +234,48 @@ Quartz Scheduler와 비교했을 때, Quartz는 Job 스케줄링에 특화되어
 **Step별 실측 소요 시간**
 
 <div class="port-perf-wrap">
-
-| Step | 소요 시간 |
-|:---|:---:|
-| validationStep | 0.115초 |
-| tempTableCreateStep | 0.097초 |
-| dataFetchMasterStep (4스레드 병렬) | 1.136초 |
-| stagingValidationStep | 0.027초 |
-| rosterCleanupStep | 0.564초 |
-| **workerSyncMasterStep (4스레드 병렬)** | **5.407초** |
-| tempTableDropStep | 0.068초 |
-| **Job 총 실행** | **7.647초** |
-
+  <table>
+    <thead>
+      <tr>
+        <th>Step</th>
+        <th>소요 시간</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>validationStep</td>
+        <td>0.115초</td>
+      </tr>
+      <tr>
+        <td>tempTableCreateStep</td>
+        <td>0.097초</td>
+      </tr>
+      <tr>
+        <td>dataFetchMasterStep (4스레드 병렬)</td>
+        <td>1.136초</td>
+      </tr>
+      <tr>
+        <td>stagingValidationStep</td>
+        <td>0.027초</td>
+      </tr>
+      <tr>
+        <td>rosterCleanupStep</td>
+        <td>0.564초</td>
+      </tr>
+      <tr>
+        <td><strong>workerSyncMasterStep (4스레드 병렬)</strong></td>
+        <td><strong>5.407초</strong></td>
+      </tr>
+      <tr>
+        <td>tempTableDropStep</td>
+        <td>0.068초</td>
+      </tr>
+      <tr>
+        <td><strong>Job 총 실행</strong></td>
+        <td><strong>7.647초</strong></td>
+      </tr>
+    </tbody>
+  </table>
 </div>
 
 <div class="port-decision">

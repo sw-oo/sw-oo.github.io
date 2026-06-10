@@ -1,10 +1,10 @@
 # main links
 main:
   - title: "Home"
-    url: https://sw-oo.github.io/
+    url: /
 
-  - title: "About"
-    url: /about/
+  # - title: "Devlog"
+  #   url: /devlog/
 
   - title: "GitHub"
     url: https://github.com/sw-oo
@@ -17,23 +17,12 @@ main:
 
 # Project pages sidebar
 projects_nav:
-  - title: "← About"
-    url: "/about/"
+  - title: "← Home"
+    url: "/"
   - title: "Poticard"
     url: "/project/poticard/"
   - title: "DnDn"
     url: "/project/dndn/"
-
-# About page sidebar TOC
-about_toc:
-  - title: "Certification / Language"
-    url: "/about/#cert"
-  - title: "Skills"
-    url: "/about/#skills"
-  - title: "Projects"
-    url: "/about/#projects"
-  - title: "Contact"
-    url: "/about/#contact"
 
 # sidebar navigation (categories)
 # 2022.02.15 sidebar update : simple ver.

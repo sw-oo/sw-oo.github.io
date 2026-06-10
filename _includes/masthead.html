@@ -1,14 +1,27 @@
 {% capture logo_path %}{{ site.logo }}{% endcapture %}
 
+{% assign display_title = site.masthead_title | default: site.title %}
+{% if page.masthead_title %}
+  {% assign display_title = page.masthead_title %}
+{% elsif page.url == '/' or page.url == '/index.html' %}
+  {% assign display_title = "swoo's Portfolio" %}
+{% elsif page.url contains '/project/' %}
+  {% assign display_title = "swoo's Portfolio" %}
+{% elsif page.url contains '/devlog' %}
+  {% assign display_title = "swoo's Devlog" %}
+{% else %}
+  {% assign display_title = "swoo's Devlog" %}
+{% endif %}
+
 <div class="masthead">
   <div class="masthead__inner-wrap">
     <div class="masthead__menu">
       <nav id="site-nav" class="greedy-nav">
         {% unless logo_path == empty %}
-          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ site.masthead_title | default: site.title }}"></a>
+          <a class="site-logo" href="{{ '/' | relative_url }}"><img src="{{ logo_path | relative_url }}" alt="{{ display_title }}"></a>
         {% endunless %}
         <a class="site-title" href="{{ '/' | relative_url }}">
-          {{ site.masthead_title | default: site.title }}
+          {{ display_title }}
           {% if site.subtitle %}<span class="site-subtitle">{{ site.subtitle }}</span>{% endif %}
         </a>
         <ul class="visible-links">

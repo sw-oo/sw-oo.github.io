@@ -1,21 +1,21 @@
 ---
-title: "About"
-permalink: /about/
 layout: single
-comments: false
+title: false
 author_profile: true
-sidebar:
-  nav: "about_toc"
+comments: false
 toc: true
 toc_label: "목차"
 toc_sticky: true
+masthead_title: "swoo's Portfolio"
 ---
 
-문제의 원인을 끝까지 파고들어 근본적인 해결책을 만들어내는 개발자입니다.
+<h2 id="introduce">Introduce</h2>
+
+문제의 원인을 끝까지 파고들어 근본적인 해결책을 만들어내는 개발자 최승우입니다.
 
 ---
 
-## Certification / Language {#cert}
+<h2 id="cert">Certification / Language</h2>
 
 <div class="port-tl-wrap port-cert-lang-wrap">
 
@@ -60,7 +60,41 @@ toc_sticky: true
 
 ---
 
-## Skills {#skills}
+<h2 id="edu">Graduate / Education</h2>
+
+<div class="port-tl-wrap port-cert-lang-wrap">
+
+  <div class="port-cert-col">
+    <div class="port-tl-section">Graduate</div>
+    <div class="port-timeline">
+      <div class="port-tl-item">
+        <div class="port-tl-date">2018.03 ~ 2025.08</div>
+        <div class="port-tl-title">한신대학교 졸업</div>
+        <div class="port-tl-sub">컴퓨터공학부</div>
+      </div>
+      <div class="port-tl-item">
+        <div class="port-tl-date">2015.03 ~ 2017.02</div>
+        <div class="port-tl-title">양천고등학교 졸업</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="port-cert-col">
+    <div class="port-tl-section">Education</div>
+    <div class="port-timeline">
+      <div class="port-tl-item">
+        <div class="port-tl-date">2025.12 ~ 2026.06</div>
+        <div class="port-tl-title">한화 Beyond SW Camp</div>
+        <div class="port-tl-sub">24기 수료 · FE·BE·Devops</div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+---
+
+<h2 id="skills">Skills</h2>
 
 <div class="port-tabs">
 
@@ -107,7 +141,7 @@ toc_sticky: true
         <div class="si-desc">브라우저 포그라운드 실시간 알림 스트리밍, Web Push와 이원화 구성</div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">Web Push API · Service Worker</div>
+        <div class="si-name">Web Push API</div>
         <div class="si-desc">VAPID 구독 관리, 브라우저 종료 상태에서도 OS 레벨 알림 전달</div>
       </div>
     </div>
@@ -116,16 +150,16 @@ toc_sticky: true
   <div id="tab-infra" class="port-tab-panel">
     <div class="port-skill-grid">
       <div class="port-skill-item">
-        <div class="si-name">Kubernetes</div>
-        <div class="si-desc">CronJob으로 배치 독립 Pod 실행, ConcurrencyPolicy Forbid · backoffLimit으로 중복 방지 및 자동 재시도</div>
+        <div class="si-name">Docker · Kubernetes</div>
+        <div class="si-desc">컨테이너 이미지 빌드·배포, CronJob 독립 Pod 실행, ConcurrencyPolicy Forbid · backoffLimit으로 중복 방지 및 자동 재시도</div>
       </div>
       <div class="port-skill-item">
         <div class="si-name">Istio</div>
         <div class="si-desc">서비스 메시로 마이크로서비스 간 트래픽 관리 및 통신 제어</div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">Docker · Jenkins</div>
-        <div class="si-desc">컨테이너 이미지 빌드·배포, Blue-Green / Canary 무중단 배포 파이프라인</div>
+        <div class="si-name">Jenkins</div>
+        <div class="si-desc">CI/CD 파이프라인 구성, Blue-Green / Canary 무중단 배포</div>
       </div>
     </div>
   </div>
@@ -137,8 +171,12 @@ toc_sticky: true
         <div class="si-desc">분산 트레이싱으로 쿼리 스팬 병목 탐지, 개선 전후 응답 시간 정량 비교</div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">Prometheus · Grafana</div>
-        <div class="si-desc">시스템 메트릭 수집 및 대시보드 모니터링</div>
+        <div class="si-name">Prometheus</div>
+        <div class="si-desc">시스템 메트릭 수집 및 모니터링</div>
+      </div>
+      <div class="port-skill-item">
+        <div class="si-name">Grafana</div>
+        <div class="si-desc">대시보드 기반 시각화 및 알림 설정</div>
       </div>
       <div class="port-skill-item">
         <div class="si-name">nGrinder</div>
@@ -151,7 +189,7 @@ toc_sticky: true
 
 ---
 
-## Projects {#projects}
+<h2 id="projects">Projects</h2>
 
 <div class="port-proj-cards">
   <a class="port-proj-card" href="/project/poticard/">
@@ -160,11 +198,10 @@ toc_sticky: true
     <div class="ppc-period">AI 기반 디지털 명함 &amp; 채용 플랫폼</div>
     <div class="ppc-desc">경력 데이터 AI 분석 → 디지털 명함 생성 → 구직자·채용 담당자 간 실시간 채팅·지원 플랫폼. 실시간 채팅, 알림 시스템, 성능 최적화 담당.</div>
     <div class="ppc-tags">
-      <span class="ppc-tag">WebSocket · STOMP</span>
+      <span class="ppc-tag">B2C</span>
+      <span class="ppc-tag">Websocket·STOMP</span>
       <span class="ppc-tag">Web Push API</span>
       <span class="ppc-tag">SSE</span>
-      <span class="ppc-tag">성능 최적화</span>
-      <span class="ppc-tag">nGrinder</span>
     </div>
   </a>
   <a class="port-proj-card" href="/project/dndn/">
@@ -173,18 +210,18 @@ toc_sticky: true
     <div class="ppc-period">건설 현장관리 ERP 시스템</div>
     <div class="ppc-desc">인력 배치·출결 관리·피로도 기반 구역 배정 ERP. Multimodule + MSA 구조. 인증/인가, 인력 동기화 배치, 모바일 API 연동 담당.</div>
     <div class="ppc-tags">
-      <span class="ppc-tag">인증/인가</span>
+      <span class="ppc-tag">B2B</span>
+      <span class="ppc-tag">MSA</span>
       <span class="ppc-tag">Spring Batch</span>
-      <span class="ppc-tag">Partitioning</span>
-      <span class="ppc-tag">Istio</span>
-      <span class="ppc-tag">인력 데이터 자동화</span>
+      <span class="ppc-tag">Application</span>
+      <span class="ppc-tag">Kubernetes</span>
     </div>
   </a>
 </div>
 
 ---
 
-## Contact {#contact}
+<h2 id="contact">Contact</h2>
 
 <div class="port-contact-wrap">
   <a class="port-contact-item" href="mailto:kokodd1234@gmail.com">
