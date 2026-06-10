@@ -1,7 +1,7 @@
 ---
 layout: single
 title: false
-author_profile: true
+author_profile: false
 comments: false
 toc: true
 toc_label: "목차"
@@ -9,9 +9,34 @@ toc_sticky: true
 masthead_title: "swoo's Portfolio"
 ---
 
-<h2 id="introduce">Introduce</h2>
-
-문제의 원인을 끝까지 파고들어 근본적인 해결책을 만들어내는 개발자 최승우입니다.
+<div class="port-hero-wrap">
+  <div class="port-hero-main">
+    <section class="port-intro-block">
+      <h2 id="introduce">Introduce</h2>
+      <p class="port-intro-text">문제의 원인을 끝까지 파고들어 근본적인 해결책을 만들어내는 개발자 최승우입니다.</p>
+    </section>
+    <section class="port-contact-block">
+      <h2 id="contact">Contact</h2>
+      <div class="port-contact-list">
+        <a class="port-contact-item" href="mailto:kokodd1234@gmail.com">
+          <span class="port-contact-icon"><i class="fas fa-envelope"></i></span>
+          <span>kokodd1234@gmail.com</span>
+        </a>
+        <a class="port-contact-item" href="tel:01085197066">
+          <span class="port-contact-icon"><i class="fas fa-mobile-alt"></i></span>
+          <span>010-8519-7066</span>
+        </a>
+        <a class="port-contact-item" href="https://github.com/sw-oo" target="_blank" rel="noopener noreferrer">
+          <span class="port-contact-icon"><i class="fab fa-github"></i></span>
+          <span>GitHub</span>
+        </a>
+      </div>
+    </section>
+  </div>
+  <div class="port-hero-photo">
+    <img src="/assets/images/profile.jpg" alt="최승우 증명사진">
+  </div>
+</div>
 
 ---
 
@@ -108,24 +133,53 @@ masthead_title: "swoo's Portfolio"
   <div id="tab-backend" class="port-tab-panel active">
     <div class="port-skill-grid">
       <div class="port-skill-item">
-        <div class="si-name">Spring Batch</div>
-        <div class="si-desc">Tasklet + Chunk 혼합 설계, Partitioning 4스레드 병렬 처리로 401초 → 7.6초 달성</div>
+        <div class="si-icon"><i class="fas fa-layer-group"></i></div>
+        <div class="si-body">
+          <div class="si-name">Spring Batch</div>
+          <div class="si-desc">Tasklet + Chunk 혼합 설계, Partitioning 4스레드 병렬 처리로 401초 → 7.6초 달성</div>
+        </div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">JPA</div>
-        <div class="si-desc">Fetch Join, @BatchSize로 N+1 제거 / @Modifying 벌크 UPDATE·INSERT로 flush() O(n²) 해소</div>
+        <div class="si-icon"><i class="fas fa-database"></i></div>
+        <div class="si-body">
+          <div class="si-name">JPA</div>
+          <div class="si-desc">Fetch Join, @BatchSize로 N+1 제거 / @Modifying 벌크 UPDATE·INSERT로 flush() O(n²) 해소</div>
+        </div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">JWT · Spring Security</div>
-        <div class="si-desc">MSA stateless 인증 필터 구현, RBAC + ABAC 혼합 인가로 리소스 소유권 검증</div>
+        <div class="si-icon"><i class="fas fa-key"></i></div>
+        <div class="si-body">
+          <div class="si-name">JWT</div>
+          <div class="si-desc">MSA stateless 인증 필터 구현</div>
+        </div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">Spring Boot · Java</div>
-        <div class="si-desc">REST API 설계, MSA 멀티모듈 구조, 도메인 레이어 분리</div>
+        <div class="si-icon"><i class="fas fa-shield-alt"></i></div>
+        <div class="si-body">
+          <div class="si-name">Spring Security</div>
+          <div class="si-desc">RBAC + ABAC 혼합 인가로 리소스 소유권 검증</div>
+        </div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">Swagger</div>
-        <div class="si-desc">REST API 명세 자동화, 팀 간 인터페이스 계약 문서화</div>
+        <div class="si-icon"><i class="fas fa-leaf"></i></div>
+        <div class="si-body">
+          <div class="si-name">Spring Boot</div>
+          <div class="si-desc">REST API 설계, MSA 멀티모듈 구조</div>
+        </div>
+      </div>
+      <div class="port-skill-item">
+        <div class="si-icon"><i class="fab fa-java"></i></div>
+        <div class="si-body">
+          <div class="si-name">Java</div>
+          <div class="si-desc">도메인 레이어 분리</div>
+        </div>
+      </div>
+      <div class="port-skill-item">
+        <div class="si-icon"><i class="fas fa-file-code"></i></div>
+        <div class="si-body">
+          <div class="si-name">Swagger</div>
+          <div class="si-desc">REST API 명세 자동화, 팀 간 인터페이스 계약 문서화</div>
+        </div>
       </div>
     </div>
   </div>
@@ -133,16 +187,32 @@ masthead_title: "swoo's Portfolio"
   <div id="tab-realtime" class="port-tab-panel">
     <div class="port-skill-grid">
       <div class="port-skill-item">
-        <div class="si-name">WebSocket · STOMP</div>
-        <div class="si-desc">채팅방 진입 시점 연결 제한, pub/sub 메시지 라우팅으로 채팅방 단위 구독 관리</div>
+        <div class="si-icon"><i class="fas fa-plug"></i></div>
+        <div class="si-body">
+          <div class="si-name">WebSocket</div>
+          <div class="si-desc">채팅방 진입 시점 연결 제한</div>
+        </div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">SSE</div>
-        <div class="si-desc">브라우저 포그라운드 실시간 알림 스트리밍, Web Push와 이원화 구성</div>
+        <div class="si-icon"><i class="fas fa-exchange-alt"></i></div>
+        <div class="si-body">
+          <div class="si-name">STOMP</div>
+          <div class="si-desc">pub/sub 메시지 라우팅으로 채팅방 단위 구독 관리</div>
+        </div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">Web Push API</div>
-        <div class="si-desc">VAPID 구독 관리, 브라우저 종료 상태에서도 OS 레벨 알림 전달</div>
+        <div class="si-icon"><i class="fas fa-broadcast-tower"></i></div>
+        <div class="si-body">
+          <div class="si-name">SSE</div>
+          <div class="si-desc">브라우저 포그라운드 실시간 알림 스트리밍, Web Push와 이원화 구성</div>
+        </div>
+      </div>
+      <div class="port-skill-item">
+        <div class="si-icon"><i class="fas fa-bell"></i></div>
+        <div class="si-body">
+          <div class="si-name">Web Push API</div>
+          <div class="si-desc">VAPID 구독 관리, 브라우저 종료 상태에서도 OS 레벨 알림 전달</div>
+        </div>
       </div>
     </div>
   </div>
@@ -150,16 +220,32 @@ masthead_title: "swoo's Portfolio"
   <div id="tab-infra" class="port-tab-panel">
     <div class="port-skill-grid">
       <div class="port-skill-item">
-        <div class="si-name">Docker · Kubernetes</div>
-        <div class="si-desc">컨테이너 이미지 빌드·배포, CronJob 독립 Pod 실행, ConcurrencyPolicy Forbid · backoffLimit으로 중복 방지 및 자동 재시도</div>
+        <div class="si-icon"><i class="fab fa-docker"></i></div>
+        <div class="si-body">
+          <div class="si-name">Docker</div>
+          <div class="si-desc">컨테이너 이미지 빌드·배포</div>
+        </div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">Istio</div>
-        <div class="si-desc">서비스 메시로 마이크로서비스 간 트래픽 관리 및 통신 제어</div>
+        <div class="si-icon"><i class="fas fa-cubes"></i></div>
+        <div class="si-body">
+          <div class="si-name">Kubernetes</div>
+          <div class="si-desc">CronJob 독립 Pod 실행, ConcurrencyPolicy Forbid · backoffLimit으로 중복 방지 및 자동 재시도</div>
+        </div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">Jenkins</div>
-        <div class="si-desc">CI/CD 파이프라인 구성, Blue-Green / Canary 무중단 배포</div>
+        <div class="si-icon"><i class="fas fa-network-wired"></i></div>
+        <div class="si-body">
+          <div class="si-name">Istio</div>
+          <div class="si-desc">서비스 메시로 마이크로서비스 간 트래픽 관리 및 통신 제어</div>
+        </div>
+      </div>
+      <div class="port-skill-item">
+        <div class="si-icon"><i class="fab fa-jenkins"></i></div>
+        <div class="si-body">
+          <div class="si-name">Jenkins</div>
+          <div class="si-desc">CI/CD 파이프라인 구성, Blue-Green / Canary 무중단 배포</div>
+        </div>
       </div>
     </div>
   </div>
@@ -167,20 +253,32 @@ masthead_title: "swoo's Portfolio"
   <div id="tab-monitoring" class="port-tab-panel">
     <div class="port-skill-grid">
       <div class="port-skill-item">
-        <div class="si-name">Jaeger</div>
-        <div class="si-desc">분산 트레이싱으로 쿼리 스팬 병목 탐지, 개선 전후 응답 시간 정량 비교</div>
+        <div class="si-icon"><i class="fas fa-route"></i></div>
+        <div class="si-body">
+          <div class="si-name">Jaeger</div>
+          <div class="si-desc">분산 트레이싱으로 쿼리 스팬 병목 탐지, 개선 전후 응답 시간 정량 비교</div>
+        </div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">Prometheus</div>
-        <div class="si-desc">시스템 메트릭 수집 및 모니터링</div>
+        <div class="si-icon"><i class="fas fa-chart-line"></i></div>
+        <div class="si-body">
+          <div class="si-name">Prometheus</div>
+          <div class="si-desc">시스템 메트릭 수집 및 모니터링</div>
+        </div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">Grafana</div>
-        <div class="si-desc">대시보드 기반 시각화 및 알림 설정</div>
+        <div class="si-icon"><i class="fas fa-chart-area"></i></div>
+        <div class="si-body">
+          <div class="si-name">Grafana</div>
+          <div class="si-desc">대시보드 기반 시각화 및 알림 설정</div>
+        </div>
       </div>
       <div class="port-skill-item">
-        <div class="si-name">nGrinder</div>
-        <div class="si-desc">240 VU 동시 접속 부하 테스트, 에러율 0% 검증</div>
+        <div class="si-icon"><i class="fas fa-tachometer-alt"></i></div>
+        <div class="si-body">
+          <div class="si-name">nGrinder</div>
+          <div class="si-desc">240 VU 동시 접속 부하 테스트, 에러율 0% 검증</div>
+        </div>
       </div>
     </div>
   </div>
@@ -216,21 +314,6 @@ masthead_title: "swoo's Portfolio"
       <span class="ppc-tag">Application</span>
       <span class="ppc-tag">Kubernetes</span>
     </div>
-  </a>
-</div>
-
----
-
-<h2 id="contact">Contact</h2>
-
-<div class="port-contact-wrap">
-  <a class="port-contact-item" href="mailto:kokodd1234@gmail.com">
-    <span class="port-contact-icon">✉</span>
-    <span>kokodd1234@gmail.com</span>
-  </a>
-  <a class="port-contact-item" href="tel:01085197066">
-    <span class="port-contact-icon">📱</span>
-    <span>010-8519-7066</span>
   </a>
 </div>
 

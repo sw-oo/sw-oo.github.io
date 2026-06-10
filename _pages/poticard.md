@@ -2,7 +2,7 @@
 title: "Poticard — AI 기반 디지털 명함 & 채용 플랫폼"
 permalink: /project/poticard/
 layout: single
-author_profile: true
+author_profile: false
 sidebar:
   nav: "projects_nav"
 toc: true

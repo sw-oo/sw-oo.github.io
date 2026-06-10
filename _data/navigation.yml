@@ -1,13 +1,13 @@
 # main links
-main:
-  - title: "Home"
-    url: /
+main: []
+  # - title: "Home"
+  #   url: /
 
   # - title: "Devlog"
   #   url: /devlog/
 
-  - title: "GitHub"
-    url: https://github.com/sw-oo
+  # - title: "GitHub"
+  #   url: https://github.com/sw-oo
 
   # - title: "Projects"
   #   url: /projects/

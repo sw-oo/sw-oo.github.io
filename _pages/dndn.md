@@ -2,7 +2,7 @@
 title: "DnDn — 건설 현장관리 ERP 시스템"
 permalink: /project/dndn/
 layout: single
-author_profile: true
+author_profile: false
 sidebar:
   nav: "projects_nav"
 toc: true
