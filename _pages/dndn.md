@@ -10,6 +10,8 @@ toc_label: "목차"
 toc_sticky: true
 ---
 
+<a class="port-live-demo is-disabled" aria-disabled="true">Live Demo &nbsp;·&nbsp; 준비 중</a>
+
 <div class="port-meta-bar">
   <div class="port-meta-item">
     <div class="port-meta-label">기간</div>
@@ -24,7 +26,7 @@ toc_sticky: true
     <div class="port-meta-value">Multimodule · MSA</div>
   </div>
   <div class="port-meta-item">
-    <div class="port-meta-label">링크</div>
+    <div class="port-meta-label">GitHub</div>
     <div class="port-meta-value">
       <a href="https://github.com/beyond-sw-camp/be24-fin-Intelli_J-DnDn-BE" target="_blank">BE</a> &nbsp;·&nbsp;
       <a href="https://github.com/beyond-sw-camp/be24-fin-Intelli_J-DnDn-APP" target="_blank">APP</a> &nbsp;·&nbsp;

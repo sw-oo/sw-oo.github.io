@@ -279,6 +279,35 @@ html { scroll-behavior: smooth; }
 .port-proj-card .ppc-tags   { display: flex; flex-wrap: wrap; gap: 5px; }
 .port-proj-card .ppc-tag    { font-size: 0.7em; background: var(--pa-light); color: var(--pa); padding: 2px 9px; border-radius: 999px; font-weight: 600; }
 
+/* ── Post: Live Demo button ── */
+.port-live-demo {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin: 0.2em 0 1.4em;
+  padding: 9px 20px;
+  background: var(--pa);
+  color: #fff !important;
+  font-size: 0.86em;
+  font-weight: 700;
+  border-radius: 8px;
+  text-decoration: none !important;
+  border: 1px solid var(--pa);
+  transition: background 0.18s, box-shadow 0.18s, transform 0.18s;
+}
+.port-live-demo:hover {
+  background: #374151;
+  box-shadow: 0 4px 14px rgba(75, 85, 99, 0.28);
+  transform: translateY(-1px);
+}
+.port-live-demo.is-disabled {
+  background: var(--pa-light);
+  color: #9ca3af !important;
+  border-color: var(--pa-border);
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 /* ── Post: Meta bar ── */
 .port-meta-bar {
   display: flex;

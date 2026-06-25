@@ -10,6 +10,8 @@ toc_label: "목차"
 toc_sticky: true
 ---
 
+<a class="port-live-demo" href="https://swoo.poticard.com" target="_blank" rel="noopener">Live Demo &nbsp;↗</a>
+
 <div class="port-meta-bar">
   <div class="port-meta-item">
     <div class="port-meta-label">기간</div>
@@ -24,10 +26,9 @@ toc_sticky: true
     <div class="port-meta-value">B2C 웹 서비스</div>
   </div>
   <div class="port-meta-item">
-    <div class="port-meta-label">링크</div>
+    <div class="port-meta-label">GitHub</div>
     <div class="port-meta-value">
-      <a href="https://github.com/beyond-sw-camp/be24-4th-DevOops-Poticard" target="_blank">GitHub</a> &nbsp;·&nbsp;
-      <a href="https://www.poticard.kro.kr" target="_blank">Service</a>
+      <a href="https://github.com/beyond-sw-camp/be24-4th-DevOops-Poticard" target="_blank">GitHub</a>
     </div>
   </div>
 </div>
