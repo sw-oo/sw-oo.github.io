@@ -2,6 +2,7 @@
 title: "DnDn — 건설 현장관리 ERP 시스템"
 permalink: /project/dndn/
 layout: single
+live_demo_pending: true
 author_profile: false
 sidebar:
   nav: "projects_nav"
@@ -9,8 +10,6 @@ toc: true
 toc_label: "목차"
 toc_sticky: true
 ---
-
-<a class="port-live-demo is-disabled" aria-disabled="true">Live Demo &nbsp;·&nbsp; 준비 중</a>
 
 <div class="port-meta-bar">
   <div class="port-meta-item">

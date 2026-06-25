@@ -279,12 +279,24 @@ html { scroll-behavior: smooth; }
 .port-proj-card .ppc-tags   { display: flex; flex-wrap: wrap; gap: 5px; }
 .port-proj-card .ppc-tag    { font-size: 0.7em; background: var(--pa-light); color: var(--pa); padding: 2px 9px; border-radius: 999px; font-weight: 600; }
 
+/* ── Post: Title + Live Demo row ── */
+.port-title-row {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+.port-title-row .page__title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /* ── Post: Live Demo button ── */
 .port-live-demo {
   display: inline-flex;
   align-items: center;
   gap: 8px;
-  margin: 0.2em 0 1.4em;
+  flex-shrink: 0;
   padding: 9px 20px;
   background: var(--pa);
   color: #fff !important;

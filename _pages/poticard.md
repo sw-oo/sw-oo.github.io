@@ -2,6 +2,7 @@
 title: "Poticard — AI 기반 디지털 명함 & 채용 플랫폼"
 permalink: /project/poticard/
 layout: single
+live_demo: "https://swoo.poticard.com"
 author_profile: false
 sidebar:
   nav: "projects_nav"
@@ -9,8 +10,6 @@ toc: true
 toc_label: "목차"
 toc_sticky: true
 ---
-
-<a class="port-live-demo" href="https://swoo.poticard.com" target="_blank" rel="noopener">Live Demo &nbsp;↗</a>
 
 <div class="port-meta-bar">
   <div class="port-meta-item">
